@@ -1,0 +1,15 @@
+= komu's scratch project
+
+Base for throwaway scripts so you can add new classes and run those.
+
+Provides some useful stuff in classpath:
+
+* Kotlin
+* JJWT
+* Spring Security Crypto
+* Spring Boot (+ logging starter)
+* Dalesbred
+* JDBC-drivers
+  * PostgreSQL
+  * HSQLDB
+* JUnit 5
