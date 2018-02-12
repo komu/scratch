@@ -1,7 +1,7 @@
 import org.gradle.kotlin.dsl.kotlin
 
 plugins {
-    kotlin("jvm", "1.1.50")
+    kotlin("jvm", "1.2.21")
     id("org.junit.platform.gradle.plugin") version "1.0.0"
 }
 
@@ -9,7 +9,7 @@ repositories {
     jcenter()
 }
 
-val kotlinVersion = "1.1.50"
+val kotlinVersion = "1.2.21"
 val junitVersion = "5.0.0"
 val springSecurityVersion = "4.2.3.RELEASE"
 val springBootVersion = "1.5.7.RELEASE"
