@@ -17,7 +17,7 @@ val springSecurityVersion = "4.2.3.RELEASE"
 val jacksonVersion = "2.9.3"
 
 springBoot {
-    mainClassName = "crypto.HttpAuthGeneratorKt"
+    mainClassName = "graphite.FeedGraphiteKt"
 }
 
 dependencies {
@@ -30,6 +30,7 @@ dependencies {
     implementation("io.jsonwebtoken:jjwt:0.8.0")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
+    implementation("org.apache.httpcomponents:httpclient")
 
     implementation("org.springframework.security:spring-security-crypto:$springSecurityVersion")
     implementation("org.springframework.boot:spring-boot")
