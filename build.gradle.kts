@@ -21,7 +21,7 @@ springBoot {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jre8", kotlinVersion))
+    implementation(kotlin("stdlib-jdk8", kotlinVersion))
 
     implementation("org.dalesbred:dalesbred:1.2.5")
     implementation("org.postgresql:postgresql:42.1.4")

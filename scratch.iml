@@ -21,6 +21,7 @@
           <option name="pluginClasspaths">
             <array />
           </option>
+          <option name="coroutinesState" value="warn" />
         </compilerArguments>
       </configuration>
     </facet>
@@ -43,7 +44,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.2.21" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.dalesbred:dalesbred:1.2.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.postgresql:postgresql:42.1.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.hsqldb:hsqldb:2.4.0" level="project" />
@@ -54,7 +55,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.security:spring-security-crypto:4.2.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot:2.0.2.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.0.2.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.21" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />
@@ -75,7 +76,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-jcl:5.0.6.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.2.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.21" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.dalesbred:dalesbred:1.2.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.postgresql:postgresql:42.1.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.hsqldb:hsqldb:2.4.0" level="project" />
@@ -86,7 +87,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.security:spring-security-crypto:4.2.3.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot:2.0.2.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.0.2.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.21" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.21" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.21" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />
@@ -107,7 +108,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework:spring-jcl:5.0.6.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.2.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.21" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.dalesbred:dalesbred:1.2.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.postgresql:postgresql:42.1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hsqldb:hsqldb:2.4.0" level="project" />
@@ -121,7 +122,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.2.21" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.21" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.21" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.21" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />
