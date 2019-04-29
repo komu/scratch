@@ -1,7 +1,5 @@
-import org.gradle.kotlin.dsl.kotlin
-
 plugins {
-    kotlin("jvm", "1.2.21")
+    kotlin("jvm") version "1.3.20"
     id("org.junit.platform.gradle.plugin") version "1.0.0"
     id("org.springframework.boot") version "2.0.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.5.RELEASE"
@@ -11,7 +9,6 @@ repositories {
     jcenter()
 }
 
-val kotlinVersion = "1.2.21"
 val junitVersion = "5.0.0"
 val springSecurityVersion = "4.2.3.RELEASE"
 val jacksonVersion = "2.9.3"
@@ -21,7 +18,7 @@ springBoot {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8", kotlinVersion))
+    implementation(kotlin("stdlib-jdk8"))
 
     implementation("org.dalesbred:dalesbred:1.2.5")
     implementation("org.postgresql:postgresql:42.1.4")
@@ -36,7 +33,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot")
     implementation("org.springframework.boot:spring-boot-starter-logging")
 
-    testImplementation(kotlin("test", kotlinVersion))
+    testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
