@@ -9,7 +9,7 @@ class SpinedBitSet {
     private val spine = mutableListOf<LongArray>()
 
     operator fun get(bitIndex: Int): Boolean {
-        if (bitIndex < 0) throw IndexOutOfBoundsException(bitIndex)
+        if (bitIndex < 0) throw IndexOutOfBoundsException("$bitIndex")
 
         return if (bitIndex < capacity) {
             val (words, wordIndex) = splitIndex(bitIndex)
