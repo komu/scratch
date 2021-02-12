@@ -1,11 +1,14 @@
 package markdown
 
 private const val tableData = """
-    <paste your data here>
 """
 
-fun main(args: Array<String>) {
-    val rows = tableData.lines().map { it.trim() }.filter { it.isNotEmpty() }.map { it.split("\t") }
+fun main() {
+    toMarkDownTable(tableData.lines(), "\t")
+}
+
+fun toMarkDownTable(lines: List<String>, separator: String) {
+    val rows = lines.map { it.trim() }.filter { it.isNotEmpty() }.map { it.split(separator) }
     val columns = rows.first()
     val data = rows.drop(1)
     val transposedData = columns.indices.map { index -> data.map { it[index] } }
