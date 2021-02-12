@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavaProjectCodeInsightSettings">
     <excluded-names>
-      <name>org.apache.log4j</name>
+      <name>org.apache.sis.util.resources.Vocabulary.Keys.File</name>
     </excluded-names>
   </component>
 </project>
