@@ -2,6 +2,7 @@ package gitstats
 
 import jetbrains.letsPlot.export.ggsave
 import jetbrains.letsPlot.geom.geom_line
+import jetbrains.letsPlot.ggplot
 import jetbrains.letsPlot.label.ggtitle
 import jetbrains.letsPlot.lets_plot
 import jetbrains.letsPlot.scale.scale_x_datetime
@@ -24,16 +25,16 @@ fun main() {
 
 private fun dumpRepoStats(repo: String, title: String, file: String) {
     val ms = measureTimeMillis {
-        val data = RepoAnalyzer(repo).analyze()
+        val stats = RepoAnalyzer(repo).analyze()
 
-        val geom = geom_line {
-            x = "times"
-            y = "lines"
-        }
+        val data = mapOf(
+            "times" to stats.map { it.commitTime },
+            "lines" to stats.map { it.lines }
+        )
 
-        val p = lets_plot(data) +
-                geom +
+        val p = ggplot(data) +
                 ggtitle(title) +
+                geom_line { x = "times"; y = "lines" } +
                 scale_y_continuous("", limits = 0 to null) +
                 scale_x_datetime("")
 
@@ -42,18 +43,19 @@ private fun dumpRepoStats(repo: String, title: String, file: String) {
     println("analyzed $repo in $ms ms")
 }
 
-class RepoAnalyzer(dir: String) {
+private class CommitStats(val commitTime: Instant, val lines: Int)
+
+private class RepoAnalyzer(dir: String) {
 
     private val repo = FileRepositoryBuilder().setGitDir(File(dir)).build()
     private val lineCountCache = mutableMapOf<ObjectId, Int>()
 
-    fun analyze(): Map<String, Any> {
+    fun analyze(): List<CommitStats> {
         val walk = RevWalk(repo)
         val resolve = repo.resolve(repo.branch)
         walk.markStart(walk.parseCommit(resolve))
 
-        val times = mutableListOf<Instant>()
-        val lines = mutableListOf<Int>()
+        val result = mutableListOf<CommitStats>()
 
         val periodBetween = Duration.ofDays(60)
         var previousTime = Instant.MAX
@@ -61,8 +63,7 @@ class RepoAnalyzer(dir: String) {
             val time = Instant.ofEpochSecond(commit.commitTime.toLong())
 
             if (Duration.between(time, previousTime) > periodBetween) {
-                times.add(time)
-                lines.add(treeSize(commit.tree))
+                result += CommitStats(time, treeSize(commit.tree))
                 previousTime = time
             }
 
@@ -71,10 +72,7 @@ class RepoAnalyzer(dir: String) {
 
         walk.dispose()
 
-        return mapOf(
-            "times" to times,
-            "lines" to lines
-        )
+        return result
     }
 
     private fun treeSize(tree: RevTree): Int {
