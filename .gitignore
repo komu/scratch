@@ -1,5 +1,7 @@
-/build
-/out
-/.gradle
+/build/
+/out/
+/.gradle/
 /.idea/workspace.xml
-
+/.idea/httpRequests/
+/data/
+/lets-plot-images/
