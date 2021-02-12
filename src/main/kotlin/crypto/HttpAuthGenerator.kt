@@ -5,7 +5,7 @@ import java.util.*
 /**
  * Encodes login and password to the format used by HTTP Basic authorization.
  */
-fun main(args: Array<String>) {
+fun main() {
     val login = "login"
     val password = "password"
 

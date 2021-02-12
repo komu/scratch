@@ -2,7 +2,7 @@ package crypto
 
 import java.security.SecureRandom
 
-fun main(args: Array<String>) {
+fun main() {
     val random = SecureRandom()
     val alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     println(buildString {
